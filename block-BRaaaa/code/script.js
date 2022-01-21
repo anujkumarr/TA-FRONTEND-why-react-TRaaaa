@@ -24,7 +24,6 @@ function handleDelete(event) {
 // display movies
 
 function displayMovies(moviesArr = []) {
-  event.preventDefault();
   root.innerHTML = "";
   moviesArr.forEach((elm, i) => {
     let li = document.createElement("li");
