@@ -22,7 +22,7 @@ function handleDelete(event) {
 }
 
 
-// elm function
+// create element function
 
 function createElement(type, attr={ }, ...children) {
   let element = document.createElement(type);
@@ -30,7 +30,7 @@ function createElement(type, attr={ }, ...children) {
     if (key.startsWith("data-")){
       element.setAttribute(key, attr[key]);
     } else if (key.startsWith("on")) {
-      let eventType = key.replace("on", "");
+      let eventType = key.replace("on", "").toLowerCase();
       element.addEventListener(eventType, attr[key])
     } else {
       element[key] = attr[key];
@@ -66,11 +66,11 @@ function displayMovies(moviesArr = []) {
         elm.name
       ), createElement('p', {}, createElement('span', {
         'data-id': i,
-        onclick: handleToggle
+        onClick: handleToggle
       }, elm.isWatched ? "Watched" : "To Watched")),
       createElement('span', {
         'data-id': i,
-        onclick: handleDelete,
+        onClick: handleDelete,
         innerText: 'Remove'
       })
     );
