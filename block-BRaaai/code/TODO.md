@@ -20,4 +20,4 @@ let cardInfo = {
 
 #### Preview
 
-![Article Card](./assets/card.jpg)
+![Article Card](../assets/card.jpg)
