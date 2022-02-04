@@ -23,6 +23,20 @@
   </script>
   <div class="container card" id="root" ></div>
   <script type="text/babel">
+     const monthNames = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
    let cardInfo = {
   title: 'City Lights in New York',
   date: new Date('2017-01-26'),
@@ -42,6 +56,7 @@ let cardInfo1 = (
 <p className="category">{cardInfo.category}</p>
 <div className="date">
   <div>{cardInfo.date.getDate()}</div>
+  <div>{monthNames[cardInfo.date.getMonth()].slice(0,3)}</div>
 </div>
 <h1>{cardInfo.title}</h1>
 <h2>{cardInfo.subTitle}</h2>
