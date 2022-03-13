@@ -4,7 +4,7 @@ function App() {
   return (
     <>
       {
-        Object.keys(color).map((elm, i) => (
+        Object.keys(color).map((elm,i) => (
           <Colors key={i} info={elm}/>
         ))
      }
